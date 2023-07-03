@@ -1,0 +1,42 @@
+Process :
+- any program running on your computer
+- it is called a Task
+- multiprocessor > run multiple processes at the same time(parallel)
+- processes run in separate memory
+
+Threads
+- anything execution within a process
+- the unit of execution within a process
+- each process has at least one thread
+- threads share the same memory space within a process
+- a process is basically a main thread
+
+Single Thread
+- so far all the programs we have written are all single threaded
+
+Python Thread
+1. using the function
+    1) define a function
+    2) create instance of built in Thread class 't=Thread(target=functionName,args)'
+    3) start the thread 't.start()'
+2. Extending the thread class
+    1) extend the built in class Thread
+        class firstThread(Thread)
+    2) override the run method
+    3) make the instance of the class
+3. without extending the thread class
+    1) hybrid approach of creating thread
+        class firstThread:
+    2) make the instance
+        obj = firstThread()
+        t = Thread(target=obj.functionName, args)
+
+A process is called a main thread
+A thread is a portion of code
+
+Thread Communication
+- the threads needs to communicate with each other to share some kind of information
+- solve
+    1) using the Boolean Flag
+    2) Using wait and notify
+
