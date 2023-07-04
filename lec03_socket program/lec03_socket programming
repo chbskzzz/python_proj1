@@ -1,0 +1,39 @@
+Socket : way of communication between clients in Python
+- the endpoint of communications between processes ona computer network
+- IP address, a port number, communications protocol
+- a programming interface allowing a program to communicate with other programs or processes
+
+Socket Address
+
+Socket in python
+import socket
+s = socket.socket(socketfamily, sockettype, protocol=0)
+    socketfamily : the address(and protocol) family(AFUNIX or AFINET)
+    sockettype : socket type(SOCKETSTREAM, SOCKDGRAM)
+    protocol : optional
+
+Creating a simple client
+s = socket.socket(socket.AFINET, socket.SOCKSTREAM)
+s.connect()
+
+AFINET argument : requesting an Internet Protocol(IP) socket, IPv4
+the transport protocol type SOCKSTREAM for TCP sockets
+
+server = "localhost"
+port = 80
+
+serveraddress = ((host,port))
+streamsocket.connect(serveraddress)
+
+data = sock.recv(10)
+print data
+
+streamsocket.close()
+
+Creating a simple server
+    s = socket.socket(socket.AFINET, socket.SOCKSTREAM)
+    s.bind()
+    s.listen()
+    s.accept()
+
+Network : a group of computer systems and other computing hardware devices
